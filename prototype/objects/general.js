@@ -13,11 +13,9 @@ function passObjsThruVarsExample () {
 
   // log result to describe behavior
   const logger = new Logger()
-  logger.header = `FILE: general, CASE: 0`
-  logger.dek = `Behavior when assigning a variable's value, which holds an object, to another variable`
   logger.statements.push(`obj1.aProp: ${aPropObj1}`)
   logger.statements.push(`obj2.aProp: ${aPropObj2}`)
-  logger.log()
+  logger.log('general', 0)
 }
 
 /**
@@ -34,11 +32,9 @@ function copyObjectExample () {
 
   // log result to describe behavior
   const logger = new Logger()
-  logger.header = `FILE: general, CASE: 1`
-  logger.dek = `Copying an object into another variable using Object.assign()`
   logger.statements.push(`obj1.aProp: ${aPropObj1}`)
   logger.statements.push(`obj2.aProp: ${aPropObj2}`)
-  logger.log()
+  logger.log('general', 1)
 }
 
 /**
@@ -57,10 +53,8 @@ function functionsAsObjs () {
 
   // log result to describe behavior
   const logger = new Logger()
-  logger.header = `FILE: general, CASE: 2`
-  logger.dek = `Functions as 'first-class' objects`
   logger.statements.push(`${executeFunction(toBeExecuted)}`)
-  logger.log()
+  logger.log('general', 2)
 }
 
 /**
@@ -80,12 +74,10 @@ function functionsWithProps () {
   }
 
   const logger = new Logger()
-  logger.header = `FILE: general, CASE: 3`
-  logger.dek = `Functions behave like plain objs and can be assigned props`
   logger.statements.push(`Plain function execution: ${iHaveProps()}`)
   logger.statements.push(`Function's property aFunctionProp: ${iHaveProps.aFunctionProp}`)
   logger.statements.push(`Function's function execution: ${iHaveProps.aFunctionsFunction()}`)
-  logger.log()
+  logger.log('general', 3)
 }
 
 module.exports = [

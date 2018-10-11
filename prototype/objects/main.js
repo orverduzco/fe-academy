@@ -1,6 +1,7 @@
 const yargs = require('yargs')
 const general = require('./general')
 const prototype = require('./prototype')
+const classes = require('./classes')
 const allowedParams = ['file', 'case']
 
 function executeFunction () {
@@ -27,6 +28,8 @@ function _getFunctToExecute (paramVal) {
       return general
     case 'prototype':
       return prototype
+    case 'classes':
+      return classes
     default:
       break
   }
