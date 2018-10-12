@@ -321,7 +321,26 @@ function functionAsConstructorQuizPart2 () {
 }
 
 /**
- * CASE 6: Polyfills example.
+ * CASE 6: What happens if a function meant to be a constructor is called without `new`?
+*/
+function functionAsConstructorCalledWithoutNew () {
+  function AnimalAsConstructor () {
+    console.log(`I have nothing to do with 'new'`)
+    this.eat = function () {
+      return `Look, ma! I'm an animal, built with a constructor, that eats!`
+    }
+  }
+
+  // log result
+  const logger = new Logger()
+  logger.statements = [
+    `Function constructor called without new says: ${AnimalAsConstructor()}`
+  ]
+  logger.log('prototype', 6)
+}
+
+/**
+ * CASE 7: Polyfills example.
  * This function will add a custom polyfill to the String built-in constructor.
 */
 function polyfillExample () {
@@ -339,7 +358,7 @@ function polyfillExample () {
     `Replacing all letters A from word: 'abcABC':`,
     `${replaced}`
   ]
-  logger.log('prototype', 6)
+  logger.log('prototype', 7)
 }
 
 module.exports = [
@@ -349,5 +368,6 @@ module.exports = [
   functionAsConstructor,
   functionAsConstructorQuizPart1,
   functionAsConstructorQuizPart2,
+  functionAsConstructorCalledWithoutNew,
   polyfillExample
 ]

@@ -44,6 +44,10 @@ const prototype = [
   },
   {
     header: `FILE: prototype, CASE: 6`,
+    dek: `What happens if a function constructor is called without 'new'?`
+  },
+  {
+    header: `FILE: prototype, CASE: 7`,
     dek: `Polyfill example. Custom polyfill to String to remove letters a from a string`
   }
 ]
@@ -52,6 +56,14 @@ const classes = [
   {
     header: `FILE: classes, CASE: 0`,
     dek: `Classes usage demonstration. Looks like SOMEONE was right, or was he/she?`
+  },
+  {
+    header: `FILE: classes, CASE: 1`,
+    dek: `Classes syntax and its equivalent as function constructor`
+  },
+  {
+    header: `FILE: classes, CASE: 2`,
+    dek: `If a class is actually a function, can it be called?`
   }
 ]
 
